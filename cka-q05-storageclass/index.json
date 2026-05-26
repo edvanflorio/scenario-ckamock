@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q05: Create and Set Default StorageClass",
+  "description": "Create a StorageClass named local-storage with rancher.io/local-path provisioner, patch it to be the default, and remove any other default",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Create and configure the StorageClass",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

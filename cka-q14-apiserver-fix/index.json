@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q14: Fix kube-apiserver Misconfiguration",
+  "description": "After a cluster migration the kube-apiserver is down because it is pointing to etcd's peer port 2380 instead of client port 2379. Fix the manifest.",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Fix the kube-apiserver configuration",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

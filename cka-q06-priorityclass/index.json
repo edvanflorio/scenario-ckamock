@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q06: Create PriorityClass and Patch Deployment",
+  "description": "Create a high-priority PriorityClass with value one less than the highest existing user-defined class, then patch the busybox-logger deployment to use it",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Create PriorityClass and patch deployment",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

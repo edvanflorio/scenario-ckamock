@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q04: Configure Pod Resource Requests and Limits",
+  "description": "Scale down the wordpress deployment, divide node resources evenly across 3 pods with matching init container resources, then scale back up",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Set resource requests and limits",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

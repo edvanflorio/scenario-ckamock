@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q15: Taints and Tolerations",
+  "description": "Add a NoSchedule taint to node01 and schedule a Pod on it by adding the matching toleration",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Taint the node and deploy a tolerating Pod",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q07: Expose Deployment with Service and Ingress",
+  "description": "Expose the echo deployment with a NodePort Service on port 8080 and create an Ingress for http://example.org/echo",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Create the Service and Ingress",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

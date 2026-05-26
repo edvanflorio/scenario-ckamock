@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q10: Create a HorizontalPodAutoscaler",
+  "description": "Create an HPA named apache-server targeting the apache-deployment in autoscale namespace with CPU target 50%, min 1, max 4 pods, and 30s downscale window",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Create the HorizontalPodAutoscaler",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

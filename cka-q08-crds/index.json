@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q08: List CRDs and Extract Documentation",
+  "description": "List all cert-manager CRDs to /root/resources.yaml and extract Certificate spec.subject docs to /root/subject.yaml",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "List CRDs and extract documentation",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

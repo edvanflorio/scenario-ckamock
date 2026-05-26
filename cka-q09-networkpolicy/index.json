@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q09: Select the Least Permissive NetworkPolicy",
+  "description": "Inspect three NetworkPolicy YAML files in /root/network-policies and deploy the one that allows frontend-to-backend communication with least privilege",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Analyse and deploy the correct NetworkPolicy",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q16: Configure NodePort Service",
+  "description": "Add container port definition to nodeport-deployment and create a NodePort Service on port 30080",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Configure the deployment port and create the Service",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

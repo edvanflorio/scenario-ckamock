@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q02: Add Sidecar Container",
+  "description": "Add a busybox sidecar container that reads logs via a shared emptyDir volume to an existing wordpress deployment",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Add the sidecar container to the wordpress deployment",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

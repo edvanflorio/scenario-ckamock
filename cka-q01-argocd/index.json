@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q01: Helm Install Argo CD without CRDs",
+  "description": "Add the Argo CD Helm repo, template the chart v7.7.3 without CRDs, and save to /root/argo-helm.yaml",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Install Argo CD via Helm (no CRDs)",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

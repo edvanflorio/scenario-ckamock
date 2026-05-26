@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q13: Install and Configure cri-dockerd",
+  "description": "Install the cri-dockerd debian package, enable the service, and configure system kernel parameters",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Install and configure cri-dockerd",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "CKA — Q12: Recover MariaDB Deployment with Retained PV",
+  "description": "Recreate a deleted PVC to reuse the existing retained PersistentVolume and redeploy MariaDB ensuring data is preserved",
+  "details": {
+    "intro": {
+      "title": "Task Overview",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      {
+        "title": "Recover the MariaDB deployment",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh"
+      }
+    ],
+    "finish": {
+      "title": "Well done!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
