@@ -1,0 +1,37 @@
+{
+  "title": "CKA Mock Exam — Simulado Completo",
+  "description": "17 questões CKA em um único cenário. Cronometre seu tempo e valide cada resposta antes de avançar.",
+  "details": {
+    "intro": {
+      "title": "Bem-vindo ao Simulado CKA",
+      "text": "intro/text.md",
+      "background": "intro/background.sh"
+    },
+    "steps": [
+      { "title": "Q01 — Helm: Argo CD without CRDs",           "text": "step01/text.md", "background": "step01/background.sh", "verify": "step01/verify.sh" },
+      { "title": "Q02 — Sidecar Container",                    "text": "step02/text.md", "background": "step02/background.sh", "verify": "step02/verify.sh" },
+      { "title": "Q03 — Migrate Ingress to Gateway API",       "text": "step03/text.md", "background": "step03/background.sh", "verify": "step03/verify.sh" },
+      { "title": "Q04 — Pod Resource Requests and Limits",     "text": "step04/text.md", "background": "step04/background.sh", "verify": "step04/verify.sh" },
+      { "title": "Q05 — StorageClass Default",                 "text": "step05/text.md", "background": "step05/background.sh", "verify": "step05/verify.sh" },
+      { "title": "Q06 — PriorityClass and Deployment Patch",   "text": "step06/text.md", "background": "step06/background.sh", "verify": "step06/verify.sh" },
+      { "title": "Q07 — Service and Ingress",                  "text": "step07/text.md", "background": "step07/background.sh", "verify": "step07/verify.sh" },
+      { "title": "Q08 — CRDs and kubectl explain",             "text": "step08/text.md", "background": "step08/background.sh", "verify": "step08/verify.sh" },
+      { "title": "Q09 — Least Permissive NetworkPolicy",       "text": "step09/text.md", "background": "step09/background.sh", "verify": "step09/verify.sh" },
+      { "title": "Q10 — HorizontalPodAutoscaler",              "text": "step10/text.md", "background": "step10/background.sh", "verify": "step10/verify.sh" },
+      { "title": "Q11 — Install CNI (NetworkPolicy support)",  "text": "step11/text.md", "background": "step11/background.sh", "verify": "step11/verify.sh" },
+      { "title": "Q12 — PVC Recovery with Retained PV",        "text": "step12/text.md", "background": "step12/background.sh", "verify": "step12/verify.sh" },
+      { "title": "Q13 — Install cri-dockerd",                  "text": "step13/text.md", "background": "step13/background.sh", "verify": "step13/verify.sh" },
+      { "title": "Q14 — Taints and Tolerations",               "text": "step14/text.md", "background": "step14/background.sh", "verify": "step14/verify.sh" },
+      { "title": "Q15 — NodePort Service",                     "text": "step15/text.md", "background": "step15/background.sh", "verify": "step15/verify.sh" },
+      { "title": "Q16 — TLS v1.3 Only",                        "text": "step16/text.md", "background": "step16/background.sh", "verify": "step16/verify.sh" },
+      { "title": "Q17 — Fix kube-apiserver (LAST)",            "text": "step17/text.md", "background": "step17/background.sh", "verify": "step17/verify.sh" }
+    ],
+    "finish": {
+      "title": "Simulado Concluído!",
+      "text": "finish/text.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-2nodes"
+  }
+}
