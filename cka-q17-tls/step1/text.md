@@ -8,26 +8,26 @@ kubectl edit cm nginx-config -n nginx-static
 
 Change the line:
 ```plain
-ssl_protocols TLSv1.2 TLSv1.3;
+ssl_protocols TLSv1.3;
 ```{{copy}}
 
 to:
 ```plain
-ssl_protocols TLSv1.3;
+ssl_protocols TLSv1.2 TLSv1.3;
 ```{{copy}}
 
-Save and exit. Then restart the deployment to load the new config.
+Save and exit. Then restart the deployment so the change is **persisted** to the running Pods.
 
 </details>
 
 <details><summary>Solution</summary>
 
-**Step 1 — Edit the ConfigMap to remove TLSv1.2:**
+**Step 1 — Edit the ConfigMap to allow TLSv1.2:**
 ```plain
 kubectl edit cm nginx-config -n nginx-static
 ```{{exec}}
 
-Change `ssl_protocols TLSv1.2 TLSv1.3;` to `ssl_protocols TLSv1.3;`
+Change `ssl_protocols TLSv1.3;` to `ssl_protocols TLSv1.2 TLSv1.3;`
 
 **Step 2 — Get the Service IP:**
 ```plain
@@ -41,7 +41,7 @@ echo "$SERVICE_IP ckaquestion.k8s.local" >> /etc/hosts
 cat /etc/hosts | tail -3
 ```{{exec}}
 
-**Step 4 — Restart the deployment:**
+**Step 4 — Restart the deployment so the ConfigMap change is persisted:**
 ```plain
 kubectl rollout restart deployment nginx-static -n nginx-static
 ```{{exec}}

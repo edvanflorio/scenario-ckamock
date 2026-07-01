@@ -8,7 +8,7 @@
       "background": "intro/background.sh"
     },
     "steps": [
-      { "title": "Q01 — Helm: Argo CD without CRDs",           "text": "step01/text.md", "background": "step01/background.sh", "verify": "step01/verify.sh" },
+      { "title": "Q01 — Helm: Install Argo CD (CRDs already present)", "text": "step01/text.md", "background": "step01/background.sh", "verify": "step01/verify.sh" },
       { "title": "Q02 — Sidecar Container",                    "text": "step02/text.md", "background": "step02/background.sh", "verify": "step02/verify.sh" },
       { "title": "Q03 — Migrate Ingress to Gateway API",       "text": "step03/text.md", "background": "step03/background.sh", "verify": "step03/verify.sh" },
       { "title": "Q04 — Pod Resource Requests and Limits",     "text": "step04/text.md", "background": "step04/background.sh", "verify": "step04/verify.sh" },
@@ -23,7 +23,7 @@
       { "title": "Q13 — Install cri-dockerd",                  "text": "step13/text.md", "background": "step13/background.sh", "verify": "step13/verify.sh" },
       { "title": "Q14 — Taints and Tolerations",               "text": "step14/text.md", "background": "step14/background.sh", "verify": "step14/verify.sh" },
       { "title": "Q15 — NodePort Service",                     "text": "step15/text.md", "background": "step15/background.sh", "verify": "step15/verify.sh" },
-      { "title": "Q16 — TLS v1.3 Only",                        "text": "step16/text.md", "background": "step16/background.sh", "verify": "step16/verify.sh" },
+      { "title": "Q16 — Allow TLS v1.2",                       "text": "step16/text.md", "background": "step16/background.sh", "verify": "step16/verify.sh" },
       { "title": "Q17 — Fix kube-apiserver (LAST)",            "text": "step17/text.md", "background": "step17/background.sh", "verify": "step17/verify.sh" }
     ],
     "finish": {

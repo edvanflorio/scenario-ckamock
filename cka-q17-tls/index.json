@@ -1,6 +1,6 @@
 {
-  "title": "CKA — Q17: Configure Nginx to Support Only TLSv1.3",
-  "description": "Edit the nginx ConfigMap to remove TLSv1.2, add the service IP to /etc/hosts, then verify TLS 1.2 fails and TLS 1.3 works",
+  "title": "CKA — Q17: Allow TLSv1.2 on Nginx",
+  "description": "Edit the nginx ConfigMap to also allow TLSv1.2, add the service IP to /etc/hosts, persist the change with a rollout restart, then verify TLS 1.2 and TLS 1.3 both work",
   "details": {
     "intro": {
       "title": "Task Overview",

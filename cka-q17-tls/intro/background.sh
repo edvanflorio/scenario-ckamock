@@ -22,7 +22,7 @@ data:
         listen 443 ssl;
         ssl_certificate /etc/nginx/tls/tls.crt;
         ssl_certificate_key /etc/nginx/tls/tls.key;
-        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_protocols TLSv1.3;
         location / {
           return 200 "Hello TLS\n";
         }

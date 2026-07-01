@@ -1,19 +1,19 @@
-## Install Argo CD via Helm (no CRDs)
+## Install Argo CD via Helm (CRDs already present)
 
-Complete all four tasks and click **Check** to validate.
+Complete all tasks and click **Check** to validate.
 
 ### Useful references
 - `helm repo add <name> <url>` — adds a Helm repository
 - `helm repo list` — lists configured repositories
-- `helm template <release> <chart> --version <ver> --set <key>=<val> --namespace <ns>` — renders templates without installing
+- `helm install <release> <chart> --version <ver> --set <key>=<val> --namespace <ns>` — installs the chart into the cluster
 
 <details><summary>Tip: Disabling CRD installation</summary>
 
 The Argo CD chart uses the value `crds.install` to control CRD creation.
-Set it to `false` to skip CRD installation:
+Since the CRDs are already present in this cluster, set it to `false` to avoid reinstalling/conflicting with them:
 
 ```plain
-helm template argocd argocd/argo-cd --version 7.7.3 --set crds.install=false --namespace argocd
+helm install argocd argocd/argo-cd --version 7.7.3 --set crds.install=false --namespace argocd
 ```{{exec}}
 
 </details>
@@ -30,14 +30,20 @@ helm repo add argocd https://argoproj.github.io/argo-helm
 helm repo list
 ```{{exec}}
 
-**Step 3 — Generate the template without CRDs and save it:**
+**Step 3 — Update the repo cache:**
 ```plain
-helm template argocd argocd/argo-cd --version 7.7.3 --set crds.install=false --namespace argocd > /root/argo-helm.yaml
+helm repo update
 ```{{exec}}
 
-**Step 4 — Verify the file was created and contains no CRDs:**
+**Step 4 — Install Argo CD into the cluster without touching existing CRDs:**
 ```plain
-grep -c "kind:" /root/argo-helm.yaml && grep "CustomResourceDefinition" /root/argo-helm.yaml || echo "No CRDs found — correct!"
+helm install argocd argocd/argo-cd --version 7.7.3 --set crds.install=false --namespace argocd
+```{{exec}}
+
+**Step 5 — Verify the release and workloads:**
+```plain
+helm list -n argocd
+kubectl get pods -n argocd
 ```{{exec}}
 
 </details>

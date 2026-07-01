@@ -1,6 +1,6 @@
 {
-  "title": "CKA — Q01: Helm Install Argo CD without reinstalling CRDs",
-  "description": "Add the Argo CD Helm repo and install the chart v7.7.3 into namespace argocd without reinstalling the CRDs already present in the cluster",
+  "title": "CKA — Q18: Recover the Control Plane After a Broken kubeadm Upgrade",
+  "description": "After a kubeadm upgrade, kube-apiserver and other control plane components are unhealthy — but not all of them. Diagnose the root cause and restore the cluster.",
   "details": {
     "intro": {
       "title": "Task Overview",
@@ -9,7 +9,7 @@
     },
     "steps": [
       {
-        "title": "Install Argo CD via Helm (CRDs already present)",
+        "title": "Diagnose and fix the control plane",
         "text": "step1/text.md",
         "verify": "step1/verify.sh"
       }
