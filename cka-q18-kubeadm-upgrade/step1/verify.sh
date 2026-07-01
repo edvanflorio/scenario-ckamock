@@ -11,8 +11,8 @@ if ! kubectl get nodes &>/dev/null; then
 fi
 echo "PASS: Kubernetes API server is reachable."
 
-CERTFILE=$(sudo grep -oP '(?<=--etcd-certfile=)\S+' "$MANIFEST" 2>/dev/null || true)
-KEYFILE=$(sudo grep -oP '(?<=--etcd-keyfile=)\S+' "$MANIFEST" 2>/dev/null || true)
+CERTFILE=$(sudo sed -n 's/.*--etcd-certfile=\([^[:space:]"]*\).*/\1/p' "$MANIFEST" 2>/dev/null | head -1)
+KEYFILE=$(sudo sed -n 's/.*--etcd-keyfile=\([^[:space:]"]*\).*/\1/p' "$MANIFEST" 2>/dev/null | head -1)
 
 if [[ -z "$CERTFILE" || ! -f "$CERTFILE" ]]; then
   echo "FAIL: kube-apiserver manifest references a missing etcd client cert: ${CERTFILE:-<none>}"
